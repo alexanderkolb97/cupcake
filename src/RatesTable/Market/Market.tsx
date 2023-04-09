@@ -44,6 +44,7 @@ const Market: FC<{ type: string }> = ({ type }) => {
       <StyledCell>{type.toUpperCase()}</StyledCell>
       {rates &&
         Object.entries(rates).map(([key, value], i) => (
+          // *** NOTE: "uuid" could be a better option but I think "key" is safe for this case. *** //
           <Cell key={key} text={value} index={i} />
         ))}
     </StyledColumn>

@@ -11,10 +11,12 @@ const RatesTable = () => (
   <StyledTable>
     <StyledColumn>
       {CURRENCY_TITLES.map(({ title }) => (
+        // *** NOTE: "uuid" could be a better option but I think "title" is safe for this case. *** //
         <StyledCell key={title}>{title}</StyledCell>
       ))}
     </StyledColumn>
     {MARKETS.map(({ title }) => (
+      // *** NOTE: "uuid" could be a better option but I think "title" is safe for this case. *** //
       <Market key={title} type={title} />
     ))}
   </StyledTable>
